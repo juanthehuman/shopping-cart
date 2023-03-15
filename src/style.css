@@ -1,0 +1,224 @@
+/**
+* Changed the default styles of the browser.
+**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/**
+* Navbar styles.
+**/
+
+.navbar {
+    background: rgb(61, 92, 92);
+    color: rgb(255, 255, 255);
+    padding: 25px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.navbar .cart {
+    background: rgb(255, 255, 255);
+    color: rgb(61, 92, 92);
+    padding: 5px;
+    border-radius: 5px;
+    position: relative
+}
+
+.navbar .cart .cart-amount {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(10px, -10px);
+    padding: 3px;
+    border-radius: 3px;
+    background: rgb(255, 0, 0);
+    font-size: 0.7em;
+    color:rgb(255, 255, 255);
+}
+
+.navbar .cart .bi-cart4 {
+    cursor: pointer;
+}
+
+/**
+* Shop styles
+**/
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 223px);
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    .shop {
+        grid-template-columns: repeat(2, 223px);
+    }
+}
+
+@media (max-width: 500px) {
+    .shop {
+        grid-template-columns: repeat(1, 223px);
+    }
+}
+
+.shop .item {
+    border: 2px solid rgb(61, 92, 92);
+    border-radius: 5px;
+}
+
+.shop .item img {
+    width: 100%;
+    border-radius: 2px 2px 0 0;
+}
+
+.shop .item .details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.shop .item .details .price-quantity  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop .item .details .price-quantity .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 1.1em;
+}
+
+.shop .item .details .price-quantity .buttons .bi-dash-lg {
+    color:rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+.shop .item .details .price-quantity .buttons .bi-plus-lg {
+    color: rgb(0, 255, 0);
+    cursor: pointer;
+}
+
+/**
+* Label styles
+**/
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-center .home-btn,
+.text-center .checkout,
+.text-center .remove-all
+ {
+    background: rgb(61, 92, 92);
+    padding: 6px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.text-center .checkout {
+    background: rgb(1, 172, 1);
+}
+
+.text-center .remove-all {
+    background: rgb(172, 1, 1);
+}
+
+/**
+* Shopping cart styles
+**/
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 15px;
+}
+
+.shopping-cart .cart-item .details .title-price-x .bi-x-lg {
+    color: rgb(255, 0, 0);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/**
+* Cart item styles
+**/
+
+.shopping-cart {
+    margin-bottom: 30px;
+}
+
+.shopping-cart .cart-item {
+    border: 1px solid rgb(61, 92, 92);
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.shopping-cart .cart-item .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.shopping-cart .cart-item .details .title-price-x {
+    width: 205px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid rgb(255, 0, 0); */
+}
+
+.shopping-cart .cart-item .details .title-price-x .title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shopping-cart .cart-item .details .title-price-x .title-price .cart-item-price {
+    background:rgb(61, 92, 92);
+    color:rgb(255, 255, 255);
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.shopping-cart .cart-item .details .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 1.1em;
+}
+
+.shopping-cart .cart-item .details .buttons i{
+    cursor: pointer;
+}
